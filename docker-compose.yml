@@ -1,0 +1,9 @@
+services:
+  grosir-uploader:
+    build: .
+    container_name: bankmatching-grosir-uploader
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    restart: unless-stopped
